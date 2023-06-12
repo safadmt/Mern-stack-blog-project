@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
 
-const db = 'mongodb+srv://safadmt:QwJPwnC8sPH5WGVc@cluster0.9ekwixw.mongodb.net/mernblogapp?retryWrites=true&w=majority'
+const db = 'mongodb+srv://safadmt:${MONGO_PASSWORD}@cluster0.9ekwixw.mongodb.net/mernblogapp?retryWrites=true&w=majority'
 
 mongoose.connect(db)
 .then(()=> {
